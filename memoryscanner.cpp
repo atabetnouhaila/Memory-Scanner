@@ -7,7 +7,7 @@
 #define PAGE_READWRITE 0x04
 #define PROCESS_WM_READ 0x0010
 
-// Function to get the process ID by the process name
+//Get the process ID by the process name
 DWORD GetProcessIdByName(const wchar_t* processName) {
     PROCESSENTRY32 processEntry;
     processEntry.dwSize = sizeof(PROCESSENTRY32);
@@ -35,7 +35,7 @@ int main() {
     MEMORY_BASIC_INFORMATION memInfo;
     SIZE_T bytesRead;  // Correct type: SIZE_T instead of DWORD
 
-    // Corrected function call: pass the address of sysInfo directly
+   
     GetSystemInfo(&sysInfo);
 
     // Get minimum and maximum address space
